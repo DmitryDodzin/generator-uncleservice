@@ -58,8 +58,6 @@ class YaasGenerator extends Generator {
     this.fs.copy(this.templatePath('_dockerignore'), this.destinationPath('.dockerignore'));
 
     this.fs.copy(this.templatePath('.nycrc'), this.destinationPath('.nycrc'));
-
-    this.fs.copy(this.templatePath('LICENSE'), this.destinationPath('LICENSE'));
   }
 
   installingExpress() {
@@ -69,7 +67,8 @@ class YaasGenerator extends Generator {
       'compression', 
       'errorhandler', 
       'helmet',
-      'gconf'
+      'gconf',
+      'morgan'
     ], { 'save': true });
   }
 

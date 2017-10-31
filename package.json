@@ -1,6 +1,6 @@
 {
   "name": "generator-uncleservice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uncle's take on a microservice",
   "main": "generator/index.js",
   "files": [

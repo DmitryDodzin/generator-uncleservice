@@ -1,11 +1,12 @@
+#!/usr/bin/env node
 
 const http = require('http');
 const gconf = require('gconf/default');
 
 if(process.env.NODE_ENV === 'production'){
-  const app = require('../dist/server');
+  var app = require('../dist/server').default;
 } else {
-  const app = require('../src/server');
+  var app = require('../src/server').default;
 }
 
 const ip = gconf.get('server.ip') || '';

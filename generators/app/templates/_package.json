@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=develop babel-node bin/www",
     "production": "cross-env NODE_ENV=production node bin/www",
-    "dev": "nodemon bin/www",
+    "dev": "nodemon bin/www --exec babel-node",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
     "build": "babel src --out-dir dist",
