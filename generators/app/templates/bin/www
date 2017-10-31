@@ -1,0 +1,16 @@
+
+const http = require('http');
+const gconf = require('gconf/default');
+
+if(process.env.NODE_ENV === 'production'){
+  const app = require('../dist/server');
+} else {
+  const app = require('../src/server');
+}
+
+const ip = gconf.get('server.ip') || '';
+const port = gconf.get('server.port') || '';
+
+http.createServer(app).listen(port, ip, () =>{
+  console.log(process.pid, 'Listening in port', port);
+});

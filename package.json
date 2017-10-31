@@ -1,0 +1,21 @@
+{
+  "name": "generator-uncleservice",
+  "version": "1.0.0",
+  "description": "Uncle's take on a microservice",
+  "main": "generator/index.js",
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "uncleservice",
+    "microservice",
+    "service",
+    "yeoman"
+  ],
+  "author": "@uncledick",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  }
+}

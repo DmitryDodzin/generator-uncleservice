@@ -1,0 +1,6 @@
+{
+  "config": {
+    "file": "./conf/service.json",
+    "env": "true"
+  }
+}

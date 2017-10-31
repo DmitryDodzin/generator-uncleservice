@@ -1,0 +1,25 @@
+{
+  "name": "@<%= prefix %>/<%= name %>",
+  "version": "0.1.0",
+  "description": "<%= description %>",
+  "main": "",
+  "scripts": {
+    "start": "cross-env NODE_ENV=develop babel-node bin/www",
+    "production": "cross-env NODE_ENV=production node bin/www",
+    "dev": "nodemon bin/www",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "babel src --out-dir dist",
+    "create-docker": "npm run build && npm run build-docker",
+    "build-docker": "docker build -t <%= prefix %>/<%= name %> .",
+    "test": "mocha --compilers js:babel-core/register",
+    "cover": "cross-env NODE_ENV=test nyc mocha"
+  },
+  "keywords": [
+    "yaas-generated"
+  ],
+  "author": "YaaS Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
