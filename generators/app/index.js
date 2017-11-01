@@ -55,17 +55,20 @@ class YaasGenerator extends Generator {
 
     this.fs.copy(this.templatePath('.jshintrc'), this.destinationPath('.jshintrc'));
 
+    this.fs.copy(this.templatePath('.nycrc'), this.destinationPath('.nycrc'));
+
     this.fs.copy(this.templatePath('_dockerignore'), this.destinationPath('.dockerignore'));
 
-    this.fs.copy(this.templatePath('.nycrc'), this.destinationPath('.nycrc'));
+    this.fs.copy(this.templatePath('Dockerfile'), this.destinationPath('Dockerfile'));
+
   }
 
   installingExpress() {
     this.npmInstall([
-      'express', 
-      'body-parser', 
-      'compression', 
-      'errorhandler', 
+      'express',
+      'body-parser',
+      'compression',
+      'errorhandler',
       'helmet',
       'gconf',
       'morgan'
@@ -74,9 +77,9 @@ class YaasGenerator extends Generator {
 
   installingDepends() {
     this.npmInstall([
-      'babel-cli', 
-      'babel-core', 
-      'babel-plugin-istanbul', 
+      'babel-cli',
+      'babel-core',
+      'babel-plugin-istanbul',
       'babel-preset-env', 
       'babel-preset-stage-0',
       'babel-register',
@@ -87,7 +90,7 @@ class YaasGenerator extends Generator {
       'mocha',
       'nyc',
       'sinon',
-      'supertest'     
+      'supertest'
     ], { 'save-dev': true });
   }
 
